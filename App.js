@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View,Text,StyleSheet } from "react-native";
+import DateTime from "./components/DateTime";
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.tempp}>
+      <Text>
+       <DateTime title={'Time'} />
+      </Text>
+      </View>
     </View>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent:'center'
+    
+    
   },
+  tempp:{
+    backgroundColor:'black',
+    height:100,
+    marginTop:60,
+    justifyContent:"center",
+    borderRadius:7
+  }
 });
